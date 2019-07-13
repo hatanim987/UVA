@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+public class Main {
+    static int calculate(int i) {
+        int count = 1;
+        while (i != 1) {
+
+            if (i % 2 != 0) {
+                i = 3 * i + 1;
+                count++;
+            } else {
+                i = i / 2;
+                count++;
+            }
+        }
+
+
+        return count;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int x, y;
+
+        while (scanner.hasNext()) {
+            x = scanner.nextInt();
+            y = scanner.nextInt();
+            int temp = 0;
+
+            if (x > y) {
+                temp = x;
+                x = y;
+                y = temp;
+                temp = -5;
+            }
+
+            int finCount = 0;
+            for (int i = x; i <= y; i++) {
+                if (finCount < calculate(i))
+                    finCount = calculate(i);
+            }
+            if (temp == -5) {
+                System.out.println(y + " " + x + " " + finCount);
+            } else {
+                System.out.println(x + " " + y + " " + finCount);
+            }
+
+
+        }
+    }
+
+}
