@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int count = 0;
+        while (scanner.hasNext()) {
+            String s = scanner.next();
+            switch (s) {
+                case "HELLO":
+                    count++;
+                    System.out.println("Case " + count + ": ENGLISH");
+                    break;
+                case "HOLA":
+                    count++;
+                    System.out.println("Case " + count + ": SPANISH");
+                    break;
+                case "HALLO":
+                    count++;
+                    System.out.println("Case " + count + ": GERMAN");
+                    break;
+                case "BONJOUR":
+                    count++;
+                    System.out.println("Case " + count + ": FRENCH");
+                    break;
+                case "CIAO":
+                    count++;
+                    System.out.println("Case " + count + ": ITALIAN");
+                    break;
+                case "ZDRAVSTVUJTE":
+                    count++;
+                    System.out.println("Case " + count + ": RUSSIAN");
+                    break;
+                case "#":
+                    break;
+                default:
+                    count++;
+                    System.out.println("Case " + count + ": UNKNOWN");
+            }
+
+        }
+
+
+    }
+}
